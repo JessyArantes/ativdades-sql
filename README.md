@@ -48,6 +48,44 @@ Aqui você encontrará exemplos de **consultas, criação de tabelas e manipula�
 
 ---
 
+## 🗂️ Manipulação de Dados em MySQL – Resumo
+### 1️⃣ Criação e Estrutura
+- **CREATE DATABASE / USE**: cria e seleciona o banco de dados.
+- **CREATE TABLE**: define tabelas com tipos de dados (ex.: `INT`, `VARCHAR`, `DECIMAL`, `DATE`).
+- **INSERT INTO**: insere registros.
+
+---
+
+### 2️⃣ Consultas Básicas (`SELECT`)
+- **SELECT … FROM …**: busca dados de uma ou mais tabelas.  
+- **WHERE**: filtra registros com condições (`>`, `<`, `=`, `LIKE`, `BETWEEN`).  
+- **ORDER BY**: ordena resultados (`ASC` ou `DESC`).  
+- **JOIN**: une tabelas relacionadas (ex.: `INNER JOIN`, `LEFT JOIN`).  
+
+---
+
+### 3️⃣ Funções de Agregação
+- **AVG**, **MAX**, **MIN**, **COUNT**, **SUM** para cálculos sobre conjuntos de linhas.  
+- **GROUP BY**: agrupa resultados por coluna(s).  
+- **HAVING**: filtra grupos depois da agregação.
+
+---
+
+### 4️⃣ Manipulação de Registros
+- **UPDATE**: altera valores existentes.
+- **DELETE**: remove registros com base em uma condição.
+
+---
+
+### 5️⃣ Subconsultas (Subqueries)
+Consultas internas usadas dentro de outra query.
+
+- **WHERE**: compara um valor com o resultado de uma subconsulta.  
+  ```sql
+  SELECT nome, salario
+  FROM Funcionarios
+  WHERE salario > (SELECT AVG(salario) FROM Funcionarios);
+
 ## 🚀 Como Utilizar
 
 1. Clone este repositório:
